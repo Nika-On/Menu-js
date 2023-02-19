@@ -23,6 +23,12 @@ a {
   color:var(--color-white);
   text-decoration: none;
 }
+li:hover {
+  background-color: var(--secondary-color);
+}
+li:hover a{
+  color:var(--dark-color)
+}
 img {
   max-width: 80%;
   height: auto;
