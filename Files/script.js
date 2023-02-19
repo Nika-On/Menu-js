@@ -88,18 +88,24 @@ function displayContent(menuItems) {
   content = content.join("");
   contentContainer.innerHTML = content;
 }
-//filtering items by category when user clicks to button
+/*
+When the user clicks a category button, the menu items are filtered 
+by the clicked category, 
+and only the items matching that category are displayed. 
+The displayContent function is called to update the contentContainer 
+with the filtered menu items.
+The buttons with the category options are selected and event listeners 
+are added to them to trigger the filtering process.
+ When the home button is clicked, all menu items are displayed. */
 buttons.forEach((item) => {
   item.addEventListener("click", (event) => {
     if (event.currentTarget.dataset.category === "home") {
       displayContent(menuItems);
     } else {
-      let menuContent = menuItems.filter(
-        (element) =>{
-          return element.category === event.currentTarget.dataset.category;
-        }
-      );
-      displayContent(menuContent)
+      let menuContent = menuItems.filter((element) => {
+        return element.category === event.currentTarget.dataset.category;
+      });
+      displayContent(menuContent);
     }
   });
 });
