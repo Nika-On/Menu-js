@@ -1,0 +1,70 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font to Arial */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+}
+
+/* Remove list styles and text decorations */
+ul {
+  list-style: none;
+}
+li {
+  border: 3px solid var(--dark-color);
+  padding: 10px 15px;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 80%;
+  height: auto;
+}
+/* Set colors in :root pseudo-class */
+:root {
+  --primary-color: #42a5f5;
+  --secondary-color: #ffc107;
+  --dark-color: #424242;
+}
+header {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  padding-bottom: 50px;
+}
+.content{
+    width: 80%;
+}
+nav ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  margin-top: 40px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 50%;
+  justify-content: center;
+  gap:30px
+}
+.description{
+  width: 512px;
+  display: flex;
+  justify-content: space-between;
+}
+@media(max-width:768px){
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
