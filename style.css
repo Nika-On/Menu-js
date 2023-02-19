@@ -1,0 +1,106 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font to Arial */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+}
+
+/* Remove list styles and text decorations */
+ul {
+  list-style: none;
+}
+li {
+  border: 3px solid var(--dark-color);
+  padding: 10px 15px;
+}
+a {
+  color:var(--color-white);
+  text-decoration: none;
+}
+li:hover {
+  background-color: var(--secondary-color);
+}
+li:hover a{
+  color:var(--dark-color)
+}
+img {
+  max-width: 80%;
+  height: auto;
+}
+/* Set colors in :root pseudo-class */
+:root {
+  --primary-color: #42a5f5;
+  --secondary-color: #ffc107;
+  --dark-color: #424242;
+  --footer-color:#0e616c;
+  --color-white:#fff;
+}
+header {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  padding-bottom: 50px;
+}
+.content{
+    width: 80%;
+}
+nav ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  margin-top: 40px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 20% 20%;
+  justify-content: center;
+  gap: 30px;
+  padding:3rem 0;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container img {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 20px;
+  height: 150px;
+}
+
+.description {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+footer{
+  display: grid;
+  place-content: center;
+  height: 10vh;
+  background-color: var(--footer-color);
+  color:var(--color-white);
+}
+@media(max-width:768px){
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+      grid-template-columns: 50%;
+    }
+    .description {
+      flex-basis: 50%;
+      margin-bottom: 0;
+    }
+}
